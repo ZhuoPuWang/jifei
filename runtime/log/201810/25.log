@@ -1,0 +1,1178 @@
+[ 2018-10-25T10:29:56+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.053091s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.078471s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540434595) [ RunTime:0.057445s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:29:56+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011726s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007955s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1540434596) [ RunTime:0.000288s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:30:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002868s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.104854s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.028894s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1540434616,`login_count`=login_count+1,`last_login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.012646s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.119279s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Chrome(71.0.3551.3)' , 'Windows 10') [ RunTime:0.032336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007978s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:5:\"admin\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"nafe\";}' , 1540434616) [ RunTime:0.000348s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:30:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012003s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.041782s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.015498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.034626s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000874s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007977s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540434617) [ RunTime:0.000329s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:30:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.018191s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008089s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540434617) [ RunTime:0.000399s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:30:18+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.013676s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.110357s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.017165s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011116s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000635s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011046s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000572s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011052s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000617s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011088s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000580s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011077s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000623s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011122s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000621s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011391s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008479s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540434617) [ RunTime:0.000382s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:30:46+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011638s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.008035s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_admin_user` WHERE  `isdelete` = 0  AND `id` > 1 LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `isdelete` = 0  AND `id` > 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008256s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/admin_user/index.html' , 'admin' , 'AdminUser' , 'index' , 'GET' , 'a:0:{}' , 1540434646) [ RunTime:0.000303s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:30:49+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010928s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.036764s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 0,10 [ RunTime:0.000270s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010655s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008157s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/teacher/index.html' , 'admin' , 'Teacher' , 'index' , 'GET' , 'a:0:{}' , 1540434649) [ RunTime:0.000311s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:30:51+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001070s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_set_mail` [ RunTime:0.035232s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_set_mail` WHERE  `isdelete` = 0 LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_set_mail` WHERE  `isdelete` = 0 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008096s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/set_mail/index.html' , 'admin' , 'SetMail' , 'index' , 'GET' , 'a:0:{}' , 1540434651) [ RunTime:0.000258s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:30:57+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001171s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007911s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/logout.html' , 'admin' , 'Pub' , 'logout' , 'GET' , 'a:0:{}' , 1540434657) [ RunTime:0.000332s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:31:00+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010333s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007905s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1540434660) [ RunTime:0.000351s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:32:22+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012883s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008315s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:5:\"admin\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"3my8\";}' , 1540434742) [ RunTime:0.000348s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:32:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011977s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.008954s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1540434749,`login_count`=login_count+1,`last_login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.008259s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Chrome(71.0.3551.3)' , 'Windows 10') [ RunTime:0.048442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008537s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:5:\"admin\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"whn7\";}' , 1540434749) [ RunTime:0.000289s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:32:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012010s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.008013s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.007819s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008297s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540434749) [ RunTime:0.000382s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:32:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001780s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009274s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540434749) [ RunTime:0.000351s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:32:30+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001464s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008020s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000539s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011246s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000617s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011151s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000622s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000606s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010752s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000635s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010927s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000585s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011153s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000612s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011292s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008214s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540434749) [ RunTime:0.000404s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:32:35+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010748s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009618s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/logout.html' , 'admin' , 'Pub' , 'logout' , 'GET' , 'a:0:{}' , 1540434755) [ RunTime:0.000346s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:32:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010854s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008264s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1540434758) [ RunTime:0.000377s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:33:06+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011010s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.007961s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1540434785,`login_count`=login_count+1,`last_login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.007883s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Chrome(71.0.3551.3)' , 'Windows 10') [ RunTime:0.726829s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008879s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:5:\"admin\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"8wfx\";}' , 1540434785) [ RunTime:0.000313s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:33:06+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010940s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.009171s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008680s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008612s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540434786) [ RunTime:0.000316s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:33:06+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001657s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008370s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540434786) [ RunTime:0.000236s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:33:07+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010972s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.007990s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000656s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000632s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010380s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.001555s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010472s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000572s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011281s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011093s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000539s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011169s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000694s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011244s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008236s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540434787) [ RunTime:0.000326s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:33:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010656s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009057s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/logout.html' , 'admin' , 'Pub' , 'logout' , 'GET' , 'a:0:{}' , 1540434790) [ RunTime:0.000363s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:33:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011716s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008396s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1540434793) [ RunTime:0.000314s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:35:15+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001557s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.007849s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1540434915,`login_count`=login_count+1,`last_login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.007985s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Chrome(71.0.3551.3)' , 'Windows 10') [ RunTime:0.022479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008204s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:5:\"admin\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"eree\";}' , 1540434915) [ RunTime:0.000302s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:35:15+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011524s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.008162s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008230s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008554s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540434915) [ RunTime:0.000301s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:35:15+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011817s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008325s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540434915) [ RunTime:0.000283s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:35:15+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012100s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008636s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000606s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010730s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000592s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000669s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000559s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000538s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000468s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000458s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000412s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000476s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000446s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000476s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000492s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008077s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540434915) [ RunTime:0.000295s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:35:18+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.024428s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009052s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/logout.html' , 'admin' , 'Pub' , 'logout' , 'GET' , 'a:0:{}' , 1540434918) [ RunTime:0.000302s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:35:21+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010513s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008079s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1540434921) [ RunTime:0.000298s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:36:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011939s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.008537s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1540434998,`login_count`=login_count+1,`last_login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.008069s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Chrome(71.0.3551.3)' , 'Windows 10') [ RunTime:0.027400s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008277s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:5:\"admin\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"fns2\";}' , 1540434998) [ RunTime:0.000259s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:36:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010268s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.008086s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008284s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008319s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540434998) [ RunTime:0.000308s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:36:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001139s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007781s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540434998) [ RunTime:0.000291s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:36:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011291s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.007872s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000580s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010593s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000554s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011141s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000579s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011112s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011148s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000659s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011138s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000611s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010944s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010620s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007982s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540434998) [ RunTime:0.000320s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:37:49+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012136s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.008422s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.007867s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008660s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435069) [ RunTime:0.000314s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:37:49+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012133s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008202s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435069) [ RunTime:0.000379s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:37:49+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011868s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.009063s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000605s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011156s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000639s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000722s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000491s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009663s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000626s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010925s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000519s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000633s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010897s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000586s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010312s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007940s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435069) [ RunTime:0.000348s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001476s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.009454s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008988s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008702s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435213) [ RunTime:0.000390s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012106s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008091s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435213) [ RunTime:0.000387s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012172s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.009090s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000561s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010996s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000753s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000776s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000691s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000813s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000704s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010987s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000597s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000608s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000458s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010655s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008419s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435213) [ RunTime:0.000360s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001498s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.009138s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008038s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008215s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435214) [ RunTime:0.000326s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012197s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008296s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435214) [ RunTime:0.000353s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011234s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.008462s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.007801s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008110s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435214) [ RunTime:0.000284s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001761s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.009472s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000702s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000743s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000584s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010715s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000752s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001235s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.001008s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001025s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000792s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010732s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000689s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010935s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000584s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000643s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009447s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435214) [ RunTime:0.000325s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011558s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008998s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435214) [ RunTime:0.000351s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:40:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011580s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.009008s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000614s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010902s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000536s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011132s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000576s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011073s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000568s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011039s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000529s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000647s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000522s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010996s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007891s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435214) [ RunTime:0.000327s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:22+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001295s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009387s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/logout.html' , 'admin' , 'Pub' , 'logout' , 'GET' , 'a:0:{}' , 1540435342) [ RunTime:0.000307s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:25+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010613s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008978s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1540435345) [ RunTime:0.000357s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:25+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011293s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.007915s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.007866s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007855s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435345) [ RunTime:0.000318s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:25+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010421s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008928s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435345) [ RunTime:0.000345s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:25+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001088s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.007763s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000585s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010992s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000679s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009967s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000683s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010039s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000605s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011076s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000668s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010053s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000685s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000750s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000625s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000780s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008490s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435345) [ RunTime:0.000321s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:28+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011952s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.010878s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_admin_user` WHERE  `isdelete` = 0  AND `id` > 1 LIMIT 1 [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `isdelete` = 0  AND `id` > 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009209s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/admin_user/index.html' , 'admin' , 'AdminUser' , 'index' , 'GET' , 'a:0:{}' , 1540435348) [ RunTime:0.000264s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:28+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001059s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.009620s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 0,10 [ RunTime:0.000292s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010984s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008725s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/teacher/index.html' , 'admin' , 'Teacher' , 'index' , 'GET' , 'a:0:{}' , 1540435348) [ RunTime:0.000378s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:31+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011477s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.007805s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_admin_user` WHERE  `isdelete` = 0  AND `id` > 1 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `isdelete` = 0  AND `id` > 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007742s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/admin_user/index.html' , 'admin' , 'AdminUser' , 'index' , 'GET' , 'a:0:{}' , 1540435351) [ RunTime:0.000323s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001439s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.010959s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/admin_user/add.html' , 'admin' , 'AdminUser' , 'add' , 'GET' , 'a:0:{}' , 1540435352) [ RunTime:0.000363s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:37+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001523s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.008358s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007923s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/admin_user/edit/id/4.html' , 'admin' , 'AdminUser' , 'edit' , 'GET' , 'a:1:{s:2:\"id\";s:1:\"4\";}' , 1540435357) [ RunTime:0.000294s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:44+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010803s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.007984s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 0,10 [ RunTime:0.000302s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010896s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.011737s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/teacher/index.html' , 'admin' , 'Teacher' , 'index' , 'GET' , 'a:0:{}' , 1540435364) [ RunTime:0.000358s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:48+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001438s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.009201s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_admin_user` WHERE  `isdelete` = 0  AND `id` > 1 LIMIT 1 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `isdelete` = 0  AND `id` > 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008183s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/admin_user/index.html' , 'admin' , 'AdminUser' , 'index' , 'GET' , 'a:0:{}' , 1540435368) [ RunTime:0.000310s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:48+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010857s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.008228s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 0,10 [ RunTime:0.000306s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011435s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008296s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/teacher/index.html' , 'admin' , 'Teacher' , 'index' , 'GET' , 'a:0:{}' , 1540435368) [ RunTime:0.000349s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:54+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011565s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.008957s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010615s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007952s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/teacher/edit/id/9.html' , 'admin' , 'Teacher' , 'edit' , 'GET' , 'a:1:{s:2:\"id\";s:1:\"9\";}' , 1540435373) [ RunTime:0.000345s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:42:58+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010567s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_set_mail` [ RunTime:0.009510s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_set_mail` WHERE  `isdelete` = 0 LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_set_mail` WHERE  `isdelete` = 0 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008294s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/set_mail/index.html' , 'admin' , 'SetMail' , 'index' , 'GET' , 'a:0:{}' , 1540435378) [ RunTime:0.000370s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:43:00+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011735s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008304s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 0,10 [ RunTime:0.000337s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000892s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008565s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/user/index.html' , 'admin' , 'User' , 'index' , 'GET' , 'a:0:{}' , 1540435379) [ RunTime:0.000369s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:43:01+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012435s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.113741s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.077321s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000818s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000730s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008404s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540435381) [ RunTime:0.000334s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:43:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011319s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.009065s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' LIMIT 1 [ RunTime:0.003943s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`user_id`,`a`.`teacher_id`,`a`.`mail_id`,`a`.`state`,`b`.`username`,`b`.`mobile`,c.name as
+            teachername,d.name as mailname,`d`.`price`,`d`.`lengthtime`,`a`.`record`,`a`.`starttime` FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000530s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010334s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007956s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/order_list/id/11.html' , 'admin' , 'Bells' , 'order_list' , 'GET' , 'a:1:{s:2:\"id\";s:2:\"11\";}' , 1540435389) [ RunTime:0.000352s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:43:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.014871s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.008948s ]
+[ sql ] [ SQL ] UPDATE `tp_bells_list`  SET `state`=0  WHERE  `id` = 28 [ RunTime:0.000385s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009888s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008127s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/jie.html?id=28' , 'admin' , 'Bells' , 'jie' , 'GET' , 'a:1:{s:2:\"id\";s:2:\"28\";}' , 1540435393) [ RunTime:0.000363s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:43:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010576s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.008038s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`user_id`,`a`.`teacher_id`,`a`.`mail_id`,`a`.`state`,`b`.`username`,`b`.`mobile`,c.name as
+            teachername,d.name as mailname,`d`.`price`,`d`.`lengthtime`,`a`.`record`,`a`.`starttime` FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000377s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010331s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008856s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/order_list/id/11.html' , 'admin' , 'Bells' , 'order_list' , 'GET' , 'a:1:{s:2:\"id\";s:2:\"11\";}' , 1540435393) [ RunTime:0.000370s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:43:26+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010588s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.009784s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '10' LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`user_id`,`a`.`teacher_id`,`a`.`mail_id`,`a`.`state`,`b`.`username`,`b`.`mobile`,c.name as
+            teachername,d.name as mailname,`d`.`price`,`d`.`lengthtime`,`a`.`record`,`a`.`starttime` FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '10' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000364s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010792s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008069s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/order_list/id/10.html' , 'admin' , 'Bells' , 'order_list' , 'GET' , 'a:1:{s:2:\"id\";s:2:\"10\";}' , 1540435406) [ RunTime:0.000310s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:20+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011631s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008737s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (1 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/logout.html' , 'admin' , 'Pub' , 'logout' , 'GET' , 'a:0:{}' , 1540435580) [ RunTime:0.000345s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:21+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011227s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008487s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/login.html' , 'admin' , 'Pub' , 'login' , 'GET' , 'a:0:{}' , 1540435581) [ RunTime:0.000408s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001447s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008684s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:7:\"lintong\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"c8gu\";}' , 1540435593) [ RunTime:0.000334s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:37+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001412s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008481s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:7:\"lintong\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"war8\";}' , 1540435597) [ RunTime:0.000363s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:43+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011910s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.008589s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'lintong'  AND `status` = 1 LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1540435603,`login_count`=login_count+1,`last_login_ip`='127.0.0.1'  WHERE  `id` = 4 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.008467s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Chrome(71.0.3551.3)' , 'Windows 10') [ RunTime:0.029218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008629s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (0 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/pub/checklogin.html' , 'admin' , 'Pub' , 'checklogin' , 'POST' , 'a:3:{s:7:\"account\";s:7:\"lintong\";s:8:\"password\";s:6:\"123456\";s:7:\"captcha\";s:4:\"henq\";}' , 1540435603) [ RunTime:0.000260s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:43+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011587s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.031203s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008367s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008099s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435603) [ RunTime:0.000271s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:43+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001364s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009429s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435603) [ RunTime:0.000373s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:43+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011960s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008597s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000614s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010729s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000546s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011190s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000585s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011140s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000763s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010065s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.001029s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001570s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000793s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000708s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000584s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000747s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008042s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435603) [ RunTime:0.000439s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:46+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010590s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000722s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010528s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.009422s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008114s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/teacher/index.html' , 'admin' , 'Teacher' , 'index' , 'GET' , 'a:0:{}' , 1540435606) [ RunTime:0.000337s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:47+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011445s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008090s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000295s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011084s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008161s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/user/index.html' , 'admin' , 'User' , 'index' , 'GET' , 'a:0:{}' , 1540435607) [ RunTime:0.000297s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:49+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011760s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.009198s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000770s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000426s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010042s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008371s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540435608) [ RunTime:0.000332s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:46:51+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011924s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.008930s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_teacher` WHERE  `son_id` = '4' [ RunTime:0.000340s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011285s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_set_mail` [ RunTime:0.008092s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_set_mail` [ RunTime:0.000259s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010635s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008136s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/add.html' , 'admin' , 'Bells' , 'add' , 'GET' , 'a:0:{}' , 1540435611) [ RunTime:0.000292s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:47:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011617s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] call sl_user('13289223170') [ RunTime:0.025157s ]
+[ sql ] [ SQL ] call sl_bells_id('1540396800','1540483200','4') [ RunTime:0.000559s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009672s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.008413s ]
+[ sql ] [ SQL ] INSERT INTO `tp_bells_list` (`user_id` , `teacher_id` , `mail_id` , `bells_id`) VALUES (14 , 11 , 1 , 11) [ RunTime:0.009631s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008038s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/add.html' , 'admin' , 'Bells' , 'add' , 'POST' , 'a:5:{s:4:\"type\";s:1:\"0\";s:6:\"mobile\";s:11:\"13289223170\";s:10:\"teacher_id\";s:2:\"11\";s:7:\"mail_id\";s:1:\"1\";s:4:\"date\";s:16:\"2018-10-25 10:47\";}' , 1540435630) [ RunTime:0.000329s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:47:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001537s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.009067s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000484s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000702s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008630s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540435630) [ RunTime:0.000417s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:47:12+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011132s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.009310s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`user_id`,`a`.`teacher_id`,`a`.`mail_id`,`a`.`state`,`b`.`username`,`b`.`mobile`,c.name as
+            teachername,d.name as mailname,`d`.`price`,`d`.`lengthtime`,`a`.`record`,`a`.`starttime` FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000388s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011085s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007896s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/order_list/id/11.html' , 'admin' , 'Bells' , 'order_list' , 'GET' , 'a:1:{s:2:\"id\";s:2:\"11\";}' , 1540435632) [ RunTime:0.000360s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:00+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011753s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008881s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007879s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435680) [ RunTime:0.000332s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:00+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012056s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008480s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435680) [ RunTime:0.000298s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:01+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001706s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008792s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000611s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011306s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000631s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000574s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000476s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000487s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000514s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000413s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000375s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000368s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000415s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000513s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008806s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435680) [ RunTime:0.000249s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:01+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.022047s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.009265s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008652s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435681) [ RunTime:0.000408s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:01+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.014870s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008229s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435681) [ RunTime:0.000336s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:01+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001577s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008329s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000577s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010876s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000671s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011063s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000653s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011005s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000581s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011224s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000644s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010903s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000581s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011176s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000578s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011348s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008699s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435681) [ RunTime:0.000367s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:02+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011744s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008579s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008566s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540435681) [ RunTime:0.000314s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:02+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011972s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008147s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540435682) [ RunTime:0.000329s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:02+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001639s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008764s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000586s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000861s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000559s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000615s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000541s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010843s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000553s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011242s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000664s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009980s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010172s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000619s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010712s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.007981s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540435682) [ RunTime:0.000312s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:03+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011580s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.009272s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000766s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000637s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008056s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540435683) [ RunTime:0.000357s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:04+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011604s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.009201s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_teacher` WHERE  `son_id` = '4' [ RunTime:0.000280s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011336s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_set_mail` [ RunTime:0.008124s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_set_mail` [ RunTime:0.000436s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010902s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009054s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/addclock.html' , 'admin' , 'Bells' , 'addclock' , 'GET' , 'a:0:{}' , 1540435684) [ RunTime:0.000347s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001615s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] call sl_user('13289223170') [ RunTime:0.000406s ]
+[ sql ] [ SQL ] call sl_bells_id('1540396800','1540483200','4') [ RunTime:0.000283s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000819s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.008416s ]
+[ sql ] [ SQL ] INSERT INTO `tp_bells_list` (`user_id` , `teacher_id` , `mail_id` , `starttime` , `bells_id`) VALUES (14 , 11 , 1 , 1540435690 , 11) [ RunTime:0.000236s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008626s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/addclock.html' , 'admin' , 'Bells' , 'addclock' , 'POST' , 'a:5:{s:4:\"type\";s:1:\"0\";s:6:\"mobile\";s:11:\"13289223170\";s:10:\"teacher_id\";s:2:\"11\";s:7:\"mail_id\";s:1:\"1\";s:4:\"date\";s:16:\"2018-10-25 10:48\";}' , 1540435690) [ RunTime:0.000316s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.027330s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.009225s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000381s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010646s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008324s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540435690) [ RunTime:0.000314s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:12+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012347s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.008048s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`user_id`,`a`.`teacher_id`,`a`.`mail_id`,`a`.`state`,`b`.`username`,`b`.`mobile`,c.name as
+            teachername,d.name as mailname,`d`.`price`,`d`.`lengthtime`,`a`.`record`,`a`.`starttime` FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000348s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011126s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008502s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/order_list/id/11.html' , 'admin' , 'Bells' , 'order_list' , 'GET' , 'a:1:{s:2:\"id\";s:2:\"11\";}' , 1540435692) [ RunTime:0.000325s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:48:46+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001411s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.009196s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' LIMIT 1 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`user_id`,`a`.`teacher_id`,`a`.`mail_id`,`a`.`state`,`b`.`username`,`b`.`mobile`,c.name as
+            teachername,d.name as mailname,`d`.`price`,`d`.`lengthtime`,`a`.`record`,`a`.`starttime` FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000460s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010003s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008368s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/order_list/id/11.html' , 'admin' , 'Bells' , 'order_list' , 'GET' , 'a:1:{s:2:\"id\";s:2:\"11\";}' , 1540435726) [ RunTime:0.000376s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:49:07+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001655s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.009263s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000426s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010548s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008232s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540435747) [ RunTime:0.000298s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:49:07+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001551s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.008359s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000422s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010563s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008118s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540435747) [ RunTime:0.000329s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:49:07+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012527s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.008169s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000734s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000421s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010700s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008126s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540435747) [ RunTime:0.000315s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:49:09+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011572s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.008501s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`user_id`,`a`.`teacher_id`,`a`.`mail_id`,`a`.`state`,`b`.`username`,`b`.`mobile`,c.name as
+            teachername,d.name as mailname,`d`.`price`,`d`.`lengthtime`,`a`.`record`,`a`.`starttime` FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '11' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000368s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010780s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008191s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/order_list/id/11.html' , 'admin' , 'Bells' , 'order_list' , 'GET' , 'a:1:{s:2:\"id\";s:2:\"11\";}' , 1540435749) [ RunTime:0.000369s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:53:51+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012349s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008187s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008200s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540436031) [ RunTime:0.000319s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:53:52+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001321s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009055s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540436032) [ RunTime:0.000465s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:53:52+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012195s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008657s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000617s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010710s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000703s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011018s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000700s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000653s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000591s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000548s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011151s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000666s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010953s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000596s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000817s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008075s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540436032) [ RunTime:0.000291s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:55:42+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010977s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000620s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010058s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.009365s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008127s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/user/index.html' , 'admin' , 'User' , 'index' , 'GET' , 'a:0:{}' , 1540436142) [ RunTime:0.000281s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:55:43+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011780s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.010186s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000808s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000425s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009673s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008032s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/bells/index.html' , 'admin' , 'Bells' , 'index' , 'GET' , 'a:0:{}' , 1540436142) [ RunTime:0.000275s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:15+08:00 ] [ error ] [8]Use of undefined constant User - assumed 'User'
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:15+08:00 ] [ error ] [8]Use of undefined constant User - assumed 'User'
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:16+08:00 ] [ error ] [8]Use of undefined constant User - assumed 'User'
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001615s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008259s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009230s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540436192) [ RunTime:0.000266s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001450s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008921s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540436192) [ RunTime:0.000220s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011996s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008236s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008739s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540436193) [ RunTime:0.000284s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011819s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.009533s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000619s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000649s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000551s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011242s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000574s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011057s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000601s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011194s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000601s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000575s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000458s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010960s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008152s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540436193) [ RunTime:0.000335s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001639s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000651s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.009123s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008834s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540436193) [ RunTime:0.000256s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011936s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008294s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008241s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/index.html' , 'admin' , 'Index' , 'index' , 'GET' , 'a:0:{}' , 1540436193) [ RunTime:0.000294s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001552s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009334s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540436193) [ RunTime:0.000360s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011214s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.009146s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/welcome.html' , 'admin' , 'Index' , 'welcome' , 'GET' , 'a:0:{}' , 1540436193) [ RunTime:0.000331s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T10:56:33+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011639s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010722s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000891s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000862s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000626s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000637s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000564s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000611s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000537s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009882s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000658s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000722s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000715s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011253s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000610s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000721s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_web_log_all` [ RunTime:0.008886s ]
+[ sql ] [ SQL ] INSERT INTO `tp_web_log_all` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `create_at`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'Windows 10' , 'Chrome(71.0.3551.3)' , 'http://www.jifei.com/admin/index/getdata' , 'admin' , 'Index' , 'getdata' , 'GET' , 'a:0:{}' , 1540436193) [ RunTime:0.000348s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:00:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011733s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.009755s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000281s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:00:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.012816s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.009401s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000522s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010568s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000662s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000679s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000515s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000530s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000552s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000504s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000520s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011046s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000664s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000976s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000640s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:02:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011772s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.010228s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000331s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:02:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001286s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008300s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000502s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000478s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000384s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000423s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000691s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000760s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000588s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000467s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000450s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:02:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011867s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.008134s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,5,3)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000308s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:02:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.020903s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.008787s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539792000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000552s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000611s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539878400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000507s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1539964800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000462s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000455s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540051200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000477s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000509s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540137600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000575s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000571s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540224000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000515s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540310400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000558s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:02:15+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001186s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000704s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010190s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.016186s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000253s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:02:16+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011950s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010031s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000299s ]
+
+---------------------------------------------------------------
+[ 2018-10-25T11:02:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011857s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.009077s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000893s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(d.price) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000676s ]
+
+---------------------------------------------------------------

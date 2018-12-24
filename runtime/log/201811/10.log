@@ -1,0 +1,727 @@
+[ 2018-11-10T14:14:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `account` = 'lintong'  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `last_login_time`=1541830457,`login_count`=login_count+1,`last_login_ip`='127.0.0.1'  WHERE  `id` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_login_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_login_log` (`uid` , `login_ip` , `login_location` , `login_browser` , `login_os`) VALUES (4 , '127.0.0.1' , '本机地址 本机地址  ' , 'IE(11.0)' , 'Windows 7') [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:14:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (3,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:14:18+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541174400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541260800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541347200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541433600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541520000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541606400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541692800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:14:23+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:14:25+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002500s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:14:31+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.022500s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:15:12+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:15:46+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=12,`name`='王涛师傅',`sex`='1',`age`='50'  WHERE  `id` = 12 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:15:46+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:15:56+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:16:05+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:16:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002500s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=12,`name`='李帅志师傅',`sex`='1',`age`='23'  WHERE  `id` = 12 [ RunTime:0.005000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:16:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:16:46+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:16:54+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:17:11+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=12,`name`='王涛师傅',`sex`='1',`age`='50'  WHERE  `id` = 12 [ RunTime:0.005000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:17:11+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:17:50+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_teacher` (`name` , `sex` , `age` , `son_id` , `createtime`) VALUES ('李帅志' , '1' , '23' , '4' , 1541830670) [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:17:50+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:18:02+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:18:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:18:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:18:47+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:18:56+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:18:59+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.020000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:19:18+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:31:40+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:32:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_teacher` (`name` , `sex` , `age` , `son_id` , `createtime`) VALUES ('三好堂王' , '1' , '35' , '4' , 1541831549) [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:32:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:32:35+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:40:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,3,5)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:40:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541174400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541260800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541347200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541433600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541520000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541606400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541692800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:42:21+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT `realname`,`email`,`mobile`,`remark` FROM `tp_admin_user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:42:49+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_admin_user`  SET `realname`='临潼店三好堂推拿馆',`email`='',`mobile`='',`remark`=''  WHERE  `id` = 4 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:42:55+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `realname`,`email`,`mobile`,`remark` FROM `tp_admin_user` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:43:09+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:43:21+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(c.money) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:43:25+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells_list` [ RunTime:0.040000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '19' LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`user_id`,`a`.`teacher_id`,`a`.`mail_id`,`a`.`state`,`b`.`username`,`b`.`mobile`,c.name as
+            teachername,d.name as mailname,`d`.`price`,`d`.`lengthtime`,`a`.`record`,`a`.`starttime`,`a`.`money` FROM `tp_bells_list` `a` LEFT JOIN `tp_user` `b` ON `a`.`user_id`=`b`.`id` LEFT JOIN `tp_teacher` `c` ON `a`.`teacher_id`=`c`.`id` LEFT JOIN `tp_set_mail` `d` ON `a`.`mail_id`=`d`.`id` WHERE  `a`.`bells_id` = '19' ORDER BY id desc LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:43:54+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:44:24+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:51:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid,node.group_id,node.title,node.type from tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 AND node.group_id > 0 ORDER BY node.sort ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (6,3,5)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:51:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541174400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541260800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541347200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541433600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541520000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541606400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541692800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:51:55+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:51:58+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:54:26+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:55:47+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:57:21+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:57:43+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] call sl_user('18691579821') [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_user` (`username` , `mobile` , `age` , `sex` , `money` , `record` , `son_id` , `createtime`) VALUES ('任九营' , '18691579821' , '37' , 1 , 1000 , '' , 4 , 1541833063) [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:57:43+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:58:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] call sl_user('15929327922') [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_user` (`username` , `mobile` , `age` , `sex` , `money` , `record` , `son_id` , `createtime`) VALUES ('王红艳' , '15929327922' , '39' , 0 , 2000 , '' , 4 , 1541833093) [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:58:13+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:58:19+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:58:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`username` FROM `tp_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:58:44+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_activ` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `discount` FROM `tp_activ` WHERE  `type` = 1  AND `state` = 1  AND `consume` <= 1000 ORDER BY consume desc LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] UPDATE `tp_user`  SET `money`=money+1200  WHERE  `id` = 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:58:44+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T14:58:51+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:04:11+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.020000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.018000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.066000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.007000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:04:47+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `tp_user`  SET `id`=1,`username`='任九营',`mobile`='18691579821',`age`='37',`sex`=1,`money`=2200,`record`=''  WHERE  `id` = 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:04:47+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:04:53+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:04:56+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '12' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:04:59+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '13' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:05:36+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '13' LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:06:26+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=13,`name`='李帅志师傅',`sex`='1',`age`='23'  WHERE  `id` = 13 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:06:26+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:06:30+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '14' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:06:37+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=14,`name`='温红师傅',`sex`='0',`age`='37'  WHERE  `id` = 14 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:06:37+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:06:40+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '15' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:06:58+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=15,`name`='童展勃师傅',`sex`='1',`age`='29'  WHERE  `id` = 15 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:06:58+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:01+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '16' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=16,`name`='周文文师傅',`sex`='1',`age`='30'  WHERE  `id` = 16 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:14+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:19+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '14' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:21+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=14,`name`='温红师傅',`sex`='0',`age`='37'  WHERE  `id` = 14 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:21+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:25+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '14' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=14,`name`='温红师傅',`sex`='0',`age`='37'  WHERE  `id` = 14 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:34+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '14' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=14,`name`='温红师傅',`sex`='1',`age`='37'  WHERE  `id` = 14 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:07:47+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '17' LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:02+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=17,`name`='卢方师傅',`sex`='1',`age`='27'  WHERE  `id` = 17 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:03+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] DELETE FROM `tp_teacher`    WHERE  `id` = 18 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:10+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:35+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] DELETE FROM `tp_teacher`    WHERE  `id` = 19 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:35+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:49+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '14' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:53+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=14,`name`='温红师傅',`sex`='0',`age`='37'  WHERE  `id` = 14 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:08:53+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:09:17+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '14' LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:09:26+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=14,`name`='温红师傅',`sex`='0',`age`='37'  WHERE  `id` = 14 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:09:26+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:10:03+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '14' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:10:09+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '12' LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:14:21+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '14' LIMIT 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:14:23+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=14,`name`='温红师傅',`sex`='0',`age`='37'  WHERE  `id` = 14 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:14:23+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:16:16+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.037000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '17' LIMIT 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:16:19+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=17,`name`='卢方师傅',`sex`='0',`age`='27'  WHERE  `id` = 17 [ RunTime:0.004000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:16:20+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:16:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.017000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.027000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '17' LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:16:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_teacher`  SET `id`=17,`name`='卢方师傅',`sex`='1',`age`='27'  WHERE  `id` = 17 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:16:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:17:52+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:17:57+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:09+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '1' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:19+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `tp_user`  SET `id`=1,`username`='任九营',`mobile`='18691579821',`age`='37',`sex`=1,`money`=0,`record`=''  WHERE  `id` = 1 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:19+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:23+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`id` = '2' LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:28+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] UPDATE `tp_user`  SET `id`=2,`username`='王红艳',`mobile`='15929327922',`age`='39',`sex`=0,`money`=0,`record`=''  WHERE  `id` = 2 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:29+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:31+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`username` FROM `tp_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:35+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_activ` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `discount` FROM `tp_activ` WHERE  `type` = 1  AND `state` = 1  AND `consume` <= 1000 ORDER BY consume desc LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] UPDATE `tp_user`  SET `money`=money+1200  WHERE  `id` = 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:35+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`username` FROM `tp_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:44+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_activ` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `discount` FROM `tp_activ` WHERE  `type` = 1  AND `state` = 1  AND `consume` <= 2000 ORDER BY consume desc LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `tp_user`  SET `money`=money+2500  WHERE  `id` = 2 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:18:44+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`username`,`a`.`mobile`,`a`.`age`,`a`.`sex`,`a`.`money`,`a`.`record`,`a`.`createtime`,`b`.`realname` FROM `tp_user` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:19:32+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT node.id,node.name,node.pid FROM tp_admin_role AS role,tp_admin_role_user AS user,tp_admin_access AS access ,tp_admin_node AS node WHERE user.user_id='4' AND user.role_id=role.id AND access.role_id=role.id AND role.status=1 AND access.node_id=node.id AND node.status=1 [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_bells` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`son_id`,`a`.`createtime`,`b`.`realname`,count(c.id) as num,sum(c.money) as money FROM `tp_bells` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` INNER JOIN `tp_bells_list` `c` ON `a`.`id`=`c`.`bells_id` INNER JOIN `tp_set_mail` `d` ON `c`.`mail_id`=`d`.`id` WHERE  `a`.`son_id` = 4 GROUP BY a.id ORDER BY a.createtime desc LIMIT 0,10 [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2018-11-10T15:20:02+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_teacher` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`name`,`a`.`age`,`a`.`sex`,`a`.`createtime`,`b`.`realname` FROM `tp_teacher` `a` INNER JOIN `tp_admin_user` `b` ON `a`.`son_id`=`b`.`id` WHERE  `a`.`son_id` = 4 LIMIT 0,10 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------

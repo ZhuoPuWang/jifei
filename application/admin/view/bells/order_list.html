@@ -1,0 +1,120 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    <table class="table table-border table-bordered table-hover table-bg mt-20">
+        <thead>
+        <tr class="text-c">
+            <th width="">用户姓名</th>
+            <th width="">手机号</th>
+            <th width="">技师</th>
+            <th width="">套餐</th>
+            <th width="">上钟时间</th>
+            <th width="">套餐时长(分)</th>
+            <th width="">价格(元)</th>
+            <th width="">状态</th>
+            <th width="70">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {volist name="list" id="vo"}
+        <tr class="text-c">
+            <td>{$vo.username ?? '散户订单'}</td>
+            <td>{$vo.mobile ?? '散户订单'}</td>
+            <td>{$vo.teachername}</td>
+            <td>{$vo.mailname}</td>
+            <td>{:date('Y-m-d H:i:s',$vo.starttime)}</td>
+            <td>{$vo.lengthtime}</td>
+            <td>￥{$vo.money}</td>
+            <td>{if $vo.state == 0}<i style="color: green">已完成</i>{else}<i style="color: red">未完成</i>{/if}</td>
+            <td class="f-14" style="width: 10%">
+                <a href="javascript:;" onclick="layer_open('修改订单','{:url(\'lockedit\',array(\'id\'=>$vo.id))}');" class="btn btn-success radius"> 修改</a>
+                <a href="javascript:;" onclick="jie(this)" name="{$vo.id}" data="{$vo.user_id}" dd ="{$vo.money}" class="btn btn-success radius"> 结账</a>
+                <a href="javascript:;" onclick="fjie(this)" name="{$vo.id}" data="{$vo.user_id}" dd ="{$vo.money}" class="btn btn-success radius"> 非会员结账</a>
+            </td>
+        </tr>
+        {/volist}
+        </tbody>
+    </table>
+    <div class="page-bootstrap">{$page ?? ''}</div>
+</div>
+{/block}
+{block name='script'}
+<script>
+    function jie(even){
+        var id = $(even).attr('name');
+        var uid = $(even).attr('data');
+        var money = $(even).attr('dd');
+        var loading = layer.load(3, {shade: [0.8, '#393D49']});
+        layer.confirm('确定结款？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            $.ajax({
+                url:"{:url('jie')}",
+                type:'get',
+                dataType:'json',
+                data:{
+                    id:id,
+                    uid:uid,
+                    money:money
+                },
+                success:function(msg){
+                    console.log(msg);
+                    if(msg ==1){
+                        layer.close(loading);
+                        layer.msg('结款成功', {icon: 1,time:2000});
+                        window.location.reload();
+                    }else{
+                        layer.close(loading);
+                        layer.msg('结款失败', {icon: 2,time:2000});
+                    }
+                },
+                error:function(err){
+                    alert('网络连接错误');
+                    window.location.reload();
+                }
+            });
+        }, function(){
+            layer.close(loading);
+        });
+    }
+    function fjie(even){
+        var id = $(even).attr('name');
+        var uid = $(even).attr('data');
+        var money = $(even).attr('dd');
+        var loading = layer.load(3, {shade: [0.8, '#393D49']});
+        layer.confirm('确定结款？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            $.ajax({
+                url:"{:url('fjie')}",
+                type:'get',
+                dataType:'json',
+                data:{
+                    id:id,
+                    uid:uid,
+                    money:money
+                },
+                success:function(msg){
+                    console.log(msg);
+                    if(msg ==1){
+                        layer.close(loading);
+                        layer.msg('结款成功', {icon: 1,time:2000});
+                        window.location.reload();
+                    }else{
+                        layer.close(loading);
+                        layer.msg('结款失败', {icon: 2,time:2000});
+                    }
+                },
+                error:function(err){
+                    alert('网络连接错误');
+                    window.location.reload();
+                }
+            });
+        }, function(){
+            layer.close(loading);
+        });
+    }
+
+</script>
+{/block}
+

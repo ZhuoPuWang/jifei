@@ -1,0 +1,51 @@
+﻿{extend name="template/base" /}
+{block name="title"}我的桌面{/block}
+{block name="content"}
+<div class="page-container">
+        <div id="container"></div>
+    </div>
+{/block}
+    {block name="script"}
+    <script src="__STATIC__/js/highcharts.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url:"{:url('Index/getData','',false,true)}",
+            type:'get',
+            dataType:'json',
+            success:function(data){
+                console.log(data);
+                var options = {
+                    chart: {
+                        type: 'line'                          //指定图表的类型，默认是折线图（line）
+                    },
+                    title: {
+                        text: '当前会员数量'                 // 标题
+                    },
+                    subtitle:{
+                        text:'更新完成时间:'+data.utime
+                    },
+                    xAxis: {
+                        categories: data.name  // x 轴分类
+                    },
+                    yAxis: {
+                        title: {
+                            text: '会员数量'                // y 轴标题
+                        }
+                    },
+                    series: [{                              // 数据列
+                        name: '会员数量',                        // 数据列名
+                        data: data.num                   // 数据
+                    }]
+                };
+                // 图表初始化函数
+                var chart = Highcharts.chart('container', options);
+            },
+            error:function(err){
+
+            }
+        });
+
+    })
+</script>
+    {/block}

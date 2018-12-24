@@ -1,0 +1,72 @@
+[ 2018-11-05T15:48:38+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011037s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.006500s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.006146s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000256s ]
+
+---------------------------------------------------------------
+[ 2018-11-05T15:48:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000958s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.006523s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.006444s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000311s ]
+
+---------------------------------------------------------------
+[ 2018-11-05T15:48:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.001238s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.007054s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540742400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000548s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000332s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540828800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010596s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540915200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000526s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000369s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541001600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000437s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010936s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541088000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000608s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000461s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541174400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000502s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010597s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541260800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000538s ]
+
+---------------------------------------------------------------
+[ 2018-11-05T15:48:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.000882s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.007414s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540742400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000621s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000517s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540828800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000599s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000421s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540915200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000672s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000348s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541001600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010755s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541088000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000374s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541174400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000409s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000312s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541260800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000399s ]
+
+---------------------------------------------------------------
+[ 2018-11-05T15:48:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.011207s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_node` [ RunTime:0.006706s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`group_id`,`title`,`type` FROM `tp_admin_node` WHERE  (  status=1 AND group_id > 0 ) [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_group` [ RunTime:0.007698s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon` FROM `tp_admin_group` WHERE  `id` IN (1,3,2,4,5,6)  AND `status` = 1 ORDER BY sort asc,id asc [ RunTime:0.000345s ]
+
+---------------------------------------------------------------
+[ 2018-11-05T15:48:39+08:00 ] [ sql ] [ DB ] CONNECT:[ UseTime:0.010969s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.006279s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540742400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000555s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000398s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540828800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000459s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000372s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1540915200 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000314s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541001600 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000457s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000394s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541088000 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000497s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000382s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541174400 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000475s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010265s ] mysql:dbname=jifei;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_user` WHERE  `createtime` < 1541260800 GROUP BY id ) `_group_count_` LIMIT 1 [ RunTime:0.000542s ]
+
+---------------------------------------------------------------

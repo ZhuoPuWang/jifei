@@ -1,0 +1,9 @@
+<td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+<td>{$vo.username}</td>
+<td>{$vo.mobile}</td>
+<td>{$vo.age}</td>
+<td>{if condition="$vo.sex eq 0"}男{else}女{/if}</td>
+<td>{$vo.money}</td>
+<td>{$vo.realname}</td>
+<td>{$vo.record}</td>
+<td>{:date('Y-m-d',$vo.createtime)}</td>

@@ -1,0 +1,32 @@
+{extend name="template/base" /}
+{block name="content"}
+<div class="page-container">
+    {include file="form" /}
+    <div class="cl pd-5 bg-1 bk-gray">
+        <span class="l" {if condition="$_SESSION['think']['auth_id'] eq 1";} style="display: none;" {/if}>
+            {tp:menu menu="add" /}
+        <a href="javascript:;" onclick="layer_open('加钟','{:url(\'addclock\')}', {w:'100%',h:'100%'});" class="btn btn-success radius ml-5"><i class="Hui-iconfont">&#xe615;</i> 加钟</a>
+        </span>
+    </div>
+    <table class="table table-border table-bordered table-hover table-bg mt-20">
+        <thead>
+        <tr class="text-c">
+            {include file="th" /}
+            <th width="70">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {volist name="list" id="vo"}
+        <tr class="text-c">
+            {include file="td" /}
+            <td class="f-14">
+                <a href="javascript:;" onclick="layer_open('{$vo.realname}','{:url(\'order_list\',array(\'id\'=>$vo.id))}', {w:'100%',h:'100%'});" name="{$vo.id}" class="btn btn-success radius ml-5"><i class="Hui-iconfont">&#xe615;</i> 查看</a>
+            </td>
+        </tr>
+        {/volist}
+        </tbody>
+    </table>
+    <div class="page-bootstrap">{$page ?? ''}</div>
+</div>
+{/block}
+
